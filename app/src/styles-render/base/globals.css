@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap");
+html {
+  margin: 0;
+  font-family: "Luxurious Roman", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #cbd4c2;
+  color: #815355;
+}
+
+/* Local overrides */
+a {
+  text-decoration: none;
+  color: #815355;
+}
+
+a:hover {
+  color: #523249;
+}
+
+button {
+  /* To fix the gray background in IE/Edge */
+  background-color: transparent;
+  font-family: "Jura", sans-serif;
+  color: #815355;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.list-container {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card {
+  margin: 20px;
+}
+
+.card img {
+  height: 500px;
+  margin: 20px;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  border-radius: 5px;
+}
+
+.card img:hover {
+  -webkit-box-shadow: 10px 5px 5px gray;
+          box-shadow: 10px 5px 5px gray;
+}
+
+/* Necesario por accesibilidad */
+*:focus {
+  outline: auto;
+}
+
+/* Quitamos los focus cuando la navegación no sea por teclado */
+.mouse-navigate *:focus {
+  outline: none;
+}
+/*# sourceMappingURL=globals.css.map */

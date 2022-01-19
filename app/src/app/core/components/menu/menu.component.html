@@ -1,0 +1,12 @@
+<div> <h1>¿Dónde está mi libro?</h1> </div>
+
+
+
+<nav>
+    <a routerLinkActive="active" routerLink="home">Home</a>
+    <a *ngIf="!this.authService.isLoggedIn()" routerLinkActive="active" routerLink="register">Registro</a>
+    <a *ngIf="!this.authService.isLoggedIn()" routerLinkActive="active" routerLink="login">Login</a>
+    <a *ngIf="this.authService.isLoggedIn()" routerLinkActive="active" routerLink="books">Libros</a>
+    <a *ngIf="this.authService.isLoggedIn()" routerLinkActive="active" routerLink="bookshops">Librerías</a>
+    <a (click)="logout()" role="button" *ngIf="this.authService.isLoggedIn()" routerLink="home">Logout</a>
+</nav>

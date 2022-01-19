@@ -1,0 +1,24 @@
+@import "../../../../../../styles-render/base/colors.scss";
+
+.bookshop-card{
+    width: 85%;
+    height: 200px;
+    padding: 0px 15px 15px 15px;
+    border: 3px solid $terciary-color;
+    border-radius: 3px;
+    text-align: center;
+    transition: all 200ms;
+    &:hover{
+        box-shadow: $terciary-color 0px 10px 16px 0px, $terciary-color 0px 0px 0px 1px;
+    }
+    p{
+        padding: 4px;
+    }
+}
+
+
+@media (min-width: 380px) and (max-width: 600px) {
+        .bookshop-card{
+            width: 270px;
+        }
+    }

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,CAAA;EACE,UAAU,EAAE,MAAM;EAClB,KAAK,ECFQ,OAAO;EDGpB,SAAS,EAAE,IAAI;CAElB;;AAED,AAAA,GAAG,CAAA;EACC,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,MAAM;CACpB",
+    "sources": [
+        "menu.component.scss",
+        "../../../../styles-render/base/colors.scss"
+    ],
+    "names": [],
+    "file": "menu.component.css"
+}

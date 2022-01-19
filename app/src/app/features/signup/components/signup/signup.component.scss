@@ -1,0 +1,16 @@
+form{
+    line-height: 40px;
+    div{
+        width: 500px;
+    }
+}
+
+
+@media (min-width: 380px) and (max-width: 600px) {
+  form{
+      div{
+          width: 70%;
+          text-align: center;
+      }
+  }
+}

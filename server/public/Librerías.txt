@@ -1,0 +1,18 @@
+[
+{"name": "Librería Dominó",
+"location": "Zaragoza"},
+{"name": "Casa del libro",
+"location": "Madrid"},
+{"name": "La Jerónima",
+"location": "Sevilla"},
+{"name": "Laie",
+"location": "Barcelona"},
+{"name": "Librería Páramo",
+"location": "Valladolid"},
+{"name": "Librería Bravo",
+"location": "Madrid"},
+{"name": "Librería Bravo",
+"location": "Madrid"},
+{"name": "La Galatea",
+"location": "Salamanca"}
+]

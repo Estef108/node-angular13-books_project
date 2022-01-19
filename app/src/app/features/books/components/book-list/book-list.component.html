@@ -1,0 +1,47 @@
+<div class="search">
+    <span>Buscar libro: </span>
+    <input type="text" class="form-control" placeholder="Enter text" [(ngModel)]="filterElement"
+        name="filterElement" />
+</div>
+
+<div class="form">
+    <form class="form-addNew" [formGroup]="addNewForm" (ngSubmit)="saveNew()">
+        <fieldset>
+            <h3>Añadir libro</h3>
+            <div>
+                <label>Título: </label>
+                <input type="text" class="form-control" formControlName="title" placeholder="Enter title">
+            </div>
+            <div>
+                <label>Autor: </label>
+                <input type="text" class="form-control" formControlName="author" placeholder="Enter author">
+            </div>
+            <div>
+                <label>Año: </label>
+                <input type="number" class="form-control" formControlName="year" placeholder="Enter year">
+            </div>
+            <div>
+                <label>Imagen: </label>
+                <input type="text" class="form-control" formControlName="image" placeholder="Enter image">
+            </div>
+        </fieldset>
+        <button type="submit">Añadir libro</button>
+    </form>
+</div>
+
+<div class="list-container" id="book-list">
+    <div class="list" *ngFor="let book of bookList | filter: filterElement |
+paginate: { itemsPerPage: 8, currentPage: p  } ">
+        <a [routerLink]="['/books', book._id]">
+            <app-book-card [book]="book"></app-book-card>
+        </a>
+    </div>
+</div>
+<div class="pages">
+    <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>
+
+
+
+
+<router-outlet></router-outlet>

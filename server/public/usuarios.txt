@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nombre": "Marta",
+        "apellido": "García",
+        "edad": 30
+    },
+    {
+        "id": 1,
+        "nombre": "Marta",
+        "apellido": "García",
+        "edad": 30
+    },
+    {
+        "id": 2,
+        "nombre": "Pablo",
+        "apellido": "Medina",
+        "edad": 32
+    },
+    {
+        "id": 3,
+        "nombre": "Javier",
+        "apellido": "Pedrero",
+        "edad": 28
+    },
+    {
+        "id": 4,
+        "nombre": "Juan",
+        "apellido": "Martinez",
+        "edad": 38
+    },
+    {
+        "id": 5,
+        "nombre": "Shuli",
+        "apellido": "Song",
+        "edad": 26
+    },
+    {
+        "id": 6,
+        "nombre": "Pedro",
+        "apellido": "Muñoz",
+        "edad": 38
+    },
+    {
+        "id": 7,
+        "nombre": "Isabel",
+        "apellido": "Minaya",
+        "edad": 65
+    },
+    {
+        "id": 8,
+        "nombre": "Julio",
+        "apellido": "Pedrero",
+        "edad": 64
+    }
+]

@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+  color: #523249;
+  font-size: 3rem;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 25px;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=menu.component.css.map */

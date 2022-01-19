@@ -1,0 +1,32 @@
+<div class="bs-content">
+
+    <div class="form">
+        <form class="form-addNew" [formGroup]="addNewForm" (ngSubmit)="saveNew()">
+            <fieldset>
+                <h3>Añadir librería</h3>
+                <div>
+                    <label>Nombre: </label>
+                    <input type="text" class="form-control" formControlName="name" placeholder="Enter name" required>
+                </div>
+                <div>
+                    <label>Dirección: </label>
+                    <input type="text" class="form-control" formControlName="address" placeholder="Enter address">
+                </div>
+                <div>
+                    <label>Ciudad: </label>
+                    <input type="text" class="form-control" formControlName="location" placeholder="Enter location">
+                </div>
+            </fieldset>
+            <button type="submit">Añadir librería</button>
+        </form>
+    </div>
+
+    <div class="bs-list-container">
+        <div class="list" id="bookshop-list" *ngFor="let bookshop of bookshopList">
+            <a [routerLink]="['/bookshops', bookshop._id]">
+                <app-bookshop-card [bookshop]="bookshop"></app-bookshop-card>
+            </a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,51 @@
+<div >
+    <form novalidate [formGroup]="signupForm" (ngSubmit)="registerUser()" class="form">
+
+        <fieldset>
+            <h3>Por favor, regístrate</h3>
+            <div>
+                <label>Name </label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Enter name" required>
+                <div *ngIf="
+                !signupForm.get('name')?.valid &&
+                (signupForm.get('name')?.dirty || submitted)
+                ">
+                    <p>Has introducido mal el nombre</p>
+                </div>
+            </div>
+            <div>
+                <label>Email address </label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Enter email" required>
+                <div *ngIf="
+                !signupForm.get('email')?.valid &&
+                (signupForm.get('email')?.dirty || submitted)
+                ">
+                    <p>Has introducido mal el email</p>
+                </div>
+            </div>
+            <div>
+                <label>Password </label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
+                <div *ngIf="
+                !signupForm.get('password')?.valid &&
+                (signupForm.get('password')?.dirty || submitted)
+                ">
+                    <p>El password debe contener mínimo 8 caracteres, una letra, un número y un carácter especial</p>
+                </div>
+            </div>
+            <div>
+                <label>Repeat password </label>
+                <input type="password" class="form-control" formControlName="rePassword" placeholder="Repeat password"
+                    required>
+                <div *ngIf="
+                !signupForm.get('rePassword')?.valid &&
+                (signupForm.get('rePassword')?.dirty || submitted)
+                ">
+                    <p>Has introducido mal la confirmación de email</p>
+                </div>
+            </div>
+            
+        </fieldset>
+        <button type="submit" [disabled]="!signupForm?.valid">Registrar</button>
+    </form>
+</div>

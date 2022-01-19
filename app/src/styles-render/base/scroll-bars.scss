@@ -1,0 +1,89 @@
+:root {
+  --scroll-max-height: 240px;
+}
+
+@media (--tablet) {
+  html {
+    overflow-y: overlay;
+  }
+
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background-color: #f7f7f7;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: var(--color-primary-super-light);
+    border: 4px solid transparent;
+    background-clip: padding-box;
+  }
+
+  ::-webkit-scrollbar-track:vertical,
+  ::-webkit-scrollbar-thumb:vertical {
+    display: none;
+  }
+
+  body:hover::-webkit-scrollbar-thumb:vertical,
+  body .vertical-custom-scroll::-webkit-scrollbar-thumb:vertical,
+  body .vertical-custom-scroll::-webkit-scrollbar-track:vertical,
+  ::-webkit-scrollbar-thumb:vertical:hover {
+    display: block;
+  }
+}
+
+/* Clase para habilitar el scroll vertical */
+.vertical-scroll {
+  overflow-y: overlay;
+  max-height: var(--scroll-max-height);
+  display: block;
+
+  &::-webkit-scrollbar-track:vertical,
+  &::-webkit-scrollbar-thumb:vertical {
+    display: block;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: spacing(3);
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    background-color: var(--color-primary-super-light);
+  }
+}
+
+/* Clase para deshabilitar el scroll y evitar el bounce en dispositivos iphone */
+.disable-scroll {
+  overflow: hidden;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Para evitar scroll transferido */
+body.scrollBlock {
+  overflow: hidden;
+  width: 100%;
+
+  @media (--tablet) {
+    overflow: visible;
+  }
+}

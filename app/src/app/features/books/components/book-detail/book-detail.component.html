@@ -1,0 +1,7 @@
+<div class="detail-content">
+    <h1>{{book?.title}}</h1>
+    <p>Autor: {{book?.author}}. Fecha de publicación: {{book?.year}}</p>
+    <div class="detail-img">
+        <img [src]=" 'http://localhost:3000/public/' + book?.image " alt="{{book?.title}}" />
+    </div>
+</div>

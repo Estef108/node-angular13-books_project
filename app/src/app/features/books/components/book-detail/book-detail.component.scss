@@ -1,0 +1,28 @@
+.detail-content{
+    width: 60%;
+    margin: 30px auto;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .detail-img{
+        margin-top: 25px;
+        width: 50%;
+        img{
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+    }
+}
+
+@media (min-width: 380px) and (max-width: 800px) {
+    .detail-content{
+        width: 90%;
+        .detail-img{
+            width: 70%;
+        }
+    }  
+}
